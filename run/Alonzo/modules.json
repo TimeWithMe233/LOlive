@@ -1,0 +1,772 @@
+{
+  "Chest": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "KillInsults": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Random"
+    }
+  },
+  "AntiFireBall": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Effects": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "MotionBlur": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Amount": 7.0
+    }
+  },
+  "FastLadder": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Criticals": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "OffHandAbuse": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "SpeedMine": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Speed": 1.1,
+      "VanillaCheckBypass": false
+    }
+  },
+  "ContainerAura": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Range": 4.0
+    }
+  },
+  "CSGOAimbot": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Silent": false,
+      "Silent-StrafeFix": false,
+      "AutoFire": false,
+      "AutoGun": false,
+      "Predict": false
+    }
+  },
+  "KeepContainer": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "ThrowItem": false
+    }
+  },
+  "SpectatorAbuse": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "MidPearl": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mouse": "Middle"
+    }
+  },
+  "Camera": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Cape": "RBW",
+      "CameraClip": false,
+      "NoHurtCamera": false,
+      "BetterBobbing": false,
+      "NoFov": false,
+      "Fov": 1.0
+    }
+  },
+  "XRay": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Opacity": 160.0,
+      "ESP": true,
+      "Tracers": true,
+      "Diamond": true,
+      "Redstone": true,
+      "Emerald": true,
+      "Lapis": true,
+      "Iron": true,
+      "Coal": true,
+      "Gold": true,
+      "Distance": 42.0,
+      "Chunk-Update": true,
+      "Delay": 10.0
+    }
+  },
+  "AutoTool": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Eagle": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Spammer": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Random",
+      "Delay": 1000.0
+    }
+  },
+  "ChatBypass": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Unicode"
+    }
+  },
+  "AutoPearl": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Disabler": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "C0FFix": false,
+      "Lowhop": false
+    }
+  },
+  "BlockAnimation": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "1.7",
+      "Swing-Speed": 4.0,
+      "Equip Prog": true,
+      "E-Prog Multiplier": 2.0,
+      "ItemX": 0.0,
+      "ItemY": 0.0,
+      "ItemZ": 0.0,
+      "ItemDistance": 1.0,
+      "BlockingX": 0.0,
+      "BlockingY": 0.0,
+      "BlockingZ": 0.0
+    }
+  },
+  "NoFall": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Particles": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Normal Particles": true,
+      "Enchantment Particles": true,
+      "Amount": 1.0
+    }
+  },
+  "AutoWeapon": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "SpoofItem": false,
+      "SpoofTicks": 10.0,
+      "ItemTool": true
+    }
+  },
+  "Sneak": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "TargetStrafe": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Range": 1.0,
+      "Auto Jump": false
+    }
+  },
+  "ItemPhysics": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Stuck": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "OldScaffold": {
+    "state": false,
+    "key": 33,
+    "values": {
+      "Rotations": true,
+      "Rotation Mode": "Watchdog",
+      "Sprint Mode": "Watchdog",
+      "Watchdog Mode": "Jump SameY",
+      "Tower Mode": "Watchdog"
+    }
+  },
+  "ThrowerAura": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Attack Delay": 100.0,
+      "Attack Range": 6.0,
+      "Field of View": 120.0,
+      "Players": true,
+      "Animals": false,
+      "Mobs": false,
+      "Invisible": false
+    }
+  },
+  "Cleaner": {
+    "state": true,
+    "key": 45,
+    "values": {
+      "Send inventory packets": true,
+      "Only while not moving": true,
+      "Inventory only": true,
+      "Swap blocks": true,
+      "Drop archery": true,
+      "Move arrows": true,
+      "Drop food": true,
+      "Drop shears": true,
+      "Delay": 2.0,
+      "Weapon Slot": 1.0,
+      "Pickaxe Slot": 2.0,
+      "Axe Slot": 3.0,
+      "Shovel Slot": 4.0,
+      "Bow Slot": 5.0,
+      "Block Slot": 6.0,
+      "Gapple Slot": 7.0
+    }
+  },
+  "ArrayList": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Important": false,
+      "HLine": true,
+      "Height": 11.0,
+      "Font": "Client",
+      "Animation": "ScaleIn",
+      "Font Size": "18",
+      "Background": true,
+      "Background Alpha": 0.35
+    }
+  },
+  "AutoPlay": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Hypixel",
+      "BanTracker": true,
+      "Reconnect": true,
+      "AutoPlay": true,
+      "Delay": 3.0,
+      "AutoGG": true,
+      "AutoGL": false,
+      "AutoWho": true,
+      "AutoScreenShot": true,
+      "ScreenShotDelay": 700.0,
+      "SkyWars": true,
+      "AutoKit": true,
+      "BedWars": true,
+      "Toggle Module": true
+    }
+  },
+  "Ambience": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Time-Mode": "Static",
+      "Weather-Mode": "Clear",
+      "Cycle-Speed": 24.0,
+      "Reverse-Cycle": false,
+      "Static-Time": 24000.0,
+      "Rain-Strength": 0.1,
+      "Display-Tag": false
+    }
+  },
+  "BalanceTimer": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Amount": 1.0
+    }
+  },
+  "Sprint": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "Inventory": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Gapple": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Render": false
+    }
+  },
+  "AutoRunaway": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Chams": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "ChamsColor": -65536,
+      "ChamsMode": "Normal",
+      "Flat": false,
+      "TeamColor": false,
+      "Alpha": 170.0
+    }
+  },
+  "KillAura": {
+    "state": true,
+    "key": 19,
+    "values": {
+      "Priority": "Range",
+      "Mode": "Switch",
+      "Attack Mode": "Post",
+      "Rotation Mode": "Improved",
+      "Aim Point": "Closest",
+      "AutoBlock mode": "Watchdog",
+      "Max Rotation Speed": 100.0,
+      "Min Rotation Speed": 100.0,
+      "Mark mode": "Exhi",
+      "CPS": 11.0,
+      "Range": 3.6,
+      "Block Range": 4.0,
+      "Scan Range": 5.0,
+      "Switch delay": 500.0,
+      "Movement Fix": true,
+      "Follow Player (Strict)": false,
+      "Toggle strict when alt key": true,
+      "RayCast": false,
+      "Player": true,
+      "Animal": false,
+      "Mob": false,
+      "Invisible": true,
+      "MarkAlpha": 255.0,
+      "MarkColor": -65536
+    }
+  },
+  "AutoClip": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "SuperKnockBack": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "InvManager": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Post": false,
+      "Mode": "Spoof",
+      "Delay": 5.0,
+      "Armor Delay": 20.0,
+      "Weapon Slot": 1.0,
+      "Pickaxe Slot": 2.0,
+      "Axe Slot": 3.0,
+      "Gapple Slot": 4.0,
+      "Shovel Slot": 5.0,
+      "Bow Slot": 6.0,
+      "Block Slot": 7.0,
+      "Pearl Slot": 8.0,
+      "Snowball/Egg Slot": 9.0
+    }
+  },
+  "Stealer": {
+    "state": true,
+    "key": 45,
+    "values": {
+      "Delay": 80.0,
+      "Aura": false,
+      "Aura Range": 3.0,
+      "Color Mode": "RainBow",
+      "Stealing Indicator": true,
+      "Title Check": true,
+      "Free Look": true,
+      "Reverse": true,
+      "Silent": false,
+      "Smart": true
+    }
+  },
+  "SessionInfo": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "Scaffold": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Keep Y": false,
+      "Mode": "Normal",
+      "Swing": true,
+      "Sprint": false,
+      "Watchdog": false,
+      "ADStrafe": false,
+      "Tower": false,
+      "Eagle": false,
+      "Safe walk": false,
+      "Telly": true,
+      "Up": false,
+      "ESP": true,
+      "TellyTicks": 2.9,
+      "Rotations": true,
+      "Rotation Mode": "Watchdog",
+      "Sprint Mode": "Vanilla",
+      "Watchdog Mode": "Jump SameY",
+      "Tower Mode": "Watchdog"
+    }
+  },
+  "NoWeb": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Grim"
+    }
+  },
+  "ClickGUI": {
+    "state": false,
+    "key": 54,
+    "values": {}
+  },
+  "Fly": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "V-Speed": 2.0,
+      "H-Speed": 2.0
+    }
+  },
+  "TargetHUD": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Tenacity",
+      "Background Alpha": 100.0
+    }
+  },
+  "NoClickDelay": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Scoreboard": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Left Layout": true,
+      "Red Numbers": false
+    }
+  },
+  "HUD": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Notification Mode": "Simple",
+      "Color Mode": "Double",
+      "Main Color": -9853471,
+      "Second Color": -16727310,
+      "Blur": false,
+      "Blur Iterations": 2.0,
+      "Blur Offset": 3.0,
+      "Bloom (Shadow)": false,
+      "Bloom Iterations": 3.0,
+      "Bloom Offset": 1.0
+    }
+  },
+  "PlayerTracker": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AntiBot": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "EntityID": false,
+      "Sleep": false,
+      "NoArmor": false,
+      "Height": false,
+      "Ground": false,
+      "Dead": false,
+      "Health": false,
+      "HytGetName": false,
+      "Quick Macro GetNameTips": false,
+      "Quick Macro GetNameMode": "4v4"
+    }
+  },
+  "Teams": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "ArmorColor": true,
+      "Color": true,
+      "ScoreboardTeam": true
+    }
+  },
+  "Protocol": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Germ": true,
+      "BypassGreen": true,
+      "Mode": "Quick Macro",
+      "WorldLoader": true
+    }
+  },
+  "NoSlow": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "Food": true,
+      "Bow": true
+    }
+  },
+  "ChestStealer": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Post": false,
+      "Chest": true,
+      "Furnace": true,
+      "BrewingStand": true,
+      "StealDelay": 100.0,
+      "PickTrash": true,
+      "Silent": true
+    }
+  },
+  "AutoPhase": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "GuiMove": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "NoLiquid": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Grim"
+    }
+  },
+  "Speed": {
+    "state": false,
+    "key": 47,
+    "values": {
+      "Mode": "Watchdog",
+      "Watchdog Mode": "GroundStrafe",
+      "Ground Speed": 2.0,
+      "Timer": 1.0,
+      "Speed": 1.0
+    }
+  },
+  "ESP": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Armor": true,
+      "Health": true,
+      "Box": true,
+      "Name": true,
+      "BoxWidth": 0.5
+    }
+  },
+  "Health": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Blink": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Simple",
+      "SkyWars": false,
+      "AutoClose": false,
+      "FakePlayer": false
+    }
+  },
+  "BlockESP": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "renderMode": "Single",
+      "BlockID": 26.0,
+      "Radius": 40.0,
+      "RenderColor": -1,
+      "Rainbow": false
+    }
+  },
+  "DynamicIsland": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "FastPlace": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Ticks": 0.0
+    }
+  },
+  "TickBase": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "RayCast",
+      "MinDistance": 3.0,
+      "MaxDistance": 4.0,
+      "RangeMode": "Smart",
+      "MaxTime": 3.0,
+      "Delay": 5.0,
+      "TargetMaxHurtTime": 2.0,
+      "OnlyKillAura": true,
+      "AuraClick": true,
+      "OnlyPlayer": true,
+      "Debug": false,
+      "BetterAnimation": true,
+      "Reverse": false,
+      "MaxReverseRange": 2.8,
+      "MinReverseRange": 2.5,
+      "ReverseStopTime": 3.0,
+      "ReverseTickTime": 3.0,
+      "ReverseDelay": 5.0,
+      "ReverseTargetMaxHurtTime": 3.0
+    }
+  },
+  "NameProtect": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Hide name": true,
+      "All players": true
+    }
+  },
+  "Velocity": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "Horizontal": 0.0,
+      "Vertical": 0.0,
+      "Air Horizontal": 0.0,
+      "Air Vertical": 0.0
+    }
+  },
+  "KillEffect": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Lightning": true,
+      "Explosion": true,
+      "Squid": true,
+      "Blood": true
+    }
+  },
+  "BackTrack": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Tick",
+      "Amount": 1.0,
+      "Range": 3.0,
+      "interval tick": 1.0
+    }
+  },
+  "MemoryFix": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Delay": 120.0,
+      "Limit": 80.0
+    }
+  },
+  "Projectile": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "MCF": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "NoC03": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AutoSoup": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Post": false,
+      "Health": 15.0,
+      "Min Delay": 300.0,
+      "Max Delay": 500.0,
+      "Drop Bowl": true,
+      "Legit": false
+    }
+  },
+  "Watermark": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AutoArmor": {
+    "state": true,
+    "key": 45,
+    "values": {
+      "Delay": 100.0,
+      "Stop when moving": false,
+      "Inventory only": true,
+      "Send inventory packets": true,
+      "Slot": 6.0
+    }
+  }
+}

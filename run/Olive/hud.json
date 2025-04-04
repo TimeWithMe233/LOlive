@@ -1,0 +1,30 @@
+{
+  "TargetHUD": {
+    "x": 633,
+    "y": 127
+  },
+  "Scoreboard": {
+    "x": 0,
+    "y": 0
+  },
+  "PlayerList": {
+    "x": 0,
+    "y": 0
+  },
+  "Armor": {
+    "x": 272,
+    "y": 191
+  },
+  "ArrayList": {
+    "x": 7,
+    "y": 295
+  },
+  "Effects": {
+    "x": 29,
+    "y": 102
+  },
+  "Watermark": {
+    "x": 588,
+    "y": 68
+  }
+}

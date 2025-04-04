@@ -1,0 +1,38 @@
+{
+  "Chest": {
+    "x": 7,
+    "y": 295
+  },
+  "TargetHUD": {
+    "x": 522,
+    "y": 164
+  },
+  "PlayerList": {
+    "x": 0,
+    "y": 0
+  },
+  "Scoreboard": {
+    "x": 721,
+    "y": 138
+  },
+  "Armor": {
+    "x": 0,
+    "y": 0
+  },
+  "ArrayList": {
+    "x": 7,
+    "y": 295
+  },
+  "Effects": {
+    "x": 7,
+    "y": 295
+  },
+  "BlockRate": {
+    "x": 588,
+    "y": 68
+  },
+  "Watermark": {
+    "x": 588,
+    "y": 68
+  }
+}

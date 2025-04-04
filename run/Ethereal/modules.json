@@ -1,0 +1,728 @@
+{
+  "Chest": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "PlayerList": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AntiFireBall": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "ArmorBreaker": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Switch Sword"
+    }
+  },
+  "Effects": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Easy"
+    }
+  },
+  "MotionBlur": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Amount": 7.0
+    }
+  },
+  "Criticals": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Legit",
+      "Delay": 20.0,
+      "DeBug": true
+    }
+  },
+  "SpeedMine": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Speed": 1.1,
+      "VanillaCheckBypass": false
+    }
+  },
+  "ChestAura": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "ThoughtWall": false,
+      "ChestOnly": false
+    }
+  },
+  "ItemESP": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "MidPearl": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mouse": "Middle"
+    }
+  },
+  "Camera": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Cape": "Astolfo",
+      "CameraClip": false,
+      "Motion Camera": false,
+      "NoHurtCamera": false,
+      "BetterBobbing": false,
+      "NoFov": false,
+      "No Fire": true,
+      "Motion Interpolation": 0.15000000596046448,
+      "Fov": 1.0
+    }
+  },
+  "XRay": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Opacity": 160.0,
+      "ESP": true,
+      "Tracers": true,
+      "Diamond": true,
+      "Redstone": true,
+      "Emerald": true,
+      "Lapis": true,
+      "Iron": true,
+      "Coal": true,
+      "Gold": true,
+      "Distance": 42.0,
+      "Chunk-Update": true,
+      "Delay": 10.0
+    }
+  },
+  "AutoTool": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Item spoof": true
+    }
+  },
+  "BlockRate": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "VClip": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Delay": 25.0
+    }
+  },
+  "Disabler": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "C0FFix": false,
+      "Lowhop": false
+    }
+  },
+  "BlockAnimation": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "1.7",
+      "Swing-Speed": 4.0,
+      "Equip Prog": true,
+      "E-Prog Multiplier": 2.0,
+      "ItemX": 0.0,
+      "ItemY": 0.0,
+      "ItemZ": 0.0,
+      "ItemDistance": 1.0,
+      "BlockingX": 0.0,
+      "BlockingY": 0.0,
+      "BlockingZ": 0.0
+    }
+  },
+  "NoFall": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AutoLobby": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Health": 5.0,
+      "RandomHub": false,
+      "AutoDisable-KillAura-Velocity": true,
+      "KeepArmor": true,
+      "NoHub": false
+    }
+  },
+  "AutoWeapon": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "SpoofItem": false,
+      "SpoofTicks": 10.0,
+      "ItemTool": true
+    }
+  },
+  "TargetStrafe": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Grim",
+      "LagBack Check": true,
+      "Scaffold/Fly Check": true,
+      "Blink Check": true
+    }
+  },
+  "ItemPhysics": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "Stuck": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "OldScaffold": {
+    "state": false,
+    "key": 33,
+    "values": {
+      "Rotations": true,
+      "Rotation Mode": "Watchdog",
+      "Sprint Mode": "Legit",
+      "Watchdog Mode": "Jump SameY",
+      "Tower Mode": "Watchdog"
+    }
+  },
+  "InventoryManager": {
+    "state": true,
+    "key": 45,
+    "values": {
+      "Silent Inventory": false,
+      "Delay": 5.0,
+      "Sword slot": 0.0,
+      "Stack slot": 1.0,
+      "Axe slot": 2.0,
+      "Pickaxe slot": 3.0,
+      "Shovel slot": 4.0,
+      "Gapple slot": 5.0
+    }
+  },
+  "ArrayList": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Important": true,
+      "Rectangle": true,
+      "RainBow": true,
+      "Chinese": false,
+      "Suffix": true,
+      "Height": 13.0,
+      "Font": "Client",
+      "Animation": "ScaleIn",
+      "Font Size": "16",
+      "Background": true,
+      "Background Alpha": 0.35
+    }
+  },
+  "AutoPlay": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Hypixel",
+      "BanTracker": true,
+      "Reconnect": true,
+      "AutoPlay": true,
+      "Delay": 3.0,
+      "AutoGG": true,
+      "AutoGL": false,
+      "AutoWho": true,
+      "AutoScreenShot": true,
+      "ScreenShotDelay": 700.0,
+      "SkyWars": true,
+      "AutoKit": true,
+      "BedWars": true,
+      "Toggle Module": true
+    }
+  },
+  "ChinaHat": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Astolfo",
+      "Target": false,
+      "Size": 0.5,
+      "Points": 30.0,
+      "OffSet": 2000.0,
+      "Color": -1,
+      "SecondColor": -16777216,
+      "ThirdColor": -16777216
+    }
+  },
+  "Ambience": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Time-Mode": "Static",
+      "Weather-Mode": "Clear",
+      "Cycle-Speed": 24.0,
+      "Reverse-Cycle": false,
+      "Static-Time": 24000.0,
+      "Rain-Strength": 0.1,
+      "Display-Tag": false
+    }
+  },
+  "BalanceTimer": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Amount": 1.0
+    }
+  },
+  "Sprint": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "BetterFPS": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "SinMode": "Java",
+      "CosMode": "Java"
+    }
+  },
+  "Gapple": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Naven"
+    }
+  },
+  "Chams": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "ChamsColor": -65536,
+      "ChamsMode": "Normal",
+      "Flat": false,
+      "TeamColor": false,
+      "Alpha": 170.0
+    }
+  },
+  "KillAura": {
+    "state": false,
+    "key": 19,
+    "values": {
+      "Priority": "Range",
+      "Mode": "Switch",
+      "Attack Mode": "Post",
+      "Rotation Mode": "Normal",
+      "Aim Point": "Closest",
+      "AutoBlock mode": "Watchdog",
+      "No hit on first tick": false,
+      "Mark mode": "Box",
+      "CPS": 13.0,
+      "Range": 3.26,
+      "Block Range": 4.0,
+      "Scan Range": 5.0,
+      "Switch delay": 500.0,
+      "Movement Fix": true,
+      "Follow Player (Strict)": false,
+      "Toggle strict when alt key": false,
+      "RayCast": true,
+      "Player": true,
+      "Animal": false,
+      "Mob": false,
+      "Invisible": true,
+      "MarkAlpha": 255.0,
+      "MarkColor": -65536,
+      "RangeESP": true
+    }
+  },
+  "TargetESP": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mark Mode": "Points",
+      "Circle Speed": 2.0,
+      "Only Player": true
+    }
+  },
+  "SuperKnockBack": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "InvManager": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Post": false,
+      "Mode": "Spoof",
+      "Delay": 5.0,
+      "Armor Delay": 20.0,
+      "Weapon Slot": 1.0,
+      "Pickaxe Slot": 2.0,
+      "Axe Slot": 3.0,
+      "Gapple Slot": 4.0,
+      "Shovel Slot": 5.0,
+      "Bow Slot": 6.0,
+      "Block Slot": 7.0,
+      "Pearl Slot": 8.0,
+      "Snowball/Egg Slot": 9.0
+    }
+  },
+  "AntiVoid": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "Fall Distance": 3.0
+    }
+  },
+  "Scaffold": {
+    "state": false,
+    "key": 0,
+    "values": {
+      "Mode": "Normal",
+      "Counter": "Naven",
+      "Swing": true,
+      "Tower": false,
+      "Eagle": false,
+      "Telly": true,
+      "MoveFix": false,
+      "BugFly": false,
+      "Swap": true,
+      "Keep Y": false,
+      "Up": false,
+      "SmoothCamera": false,
+      "TellyMode": "Grim",
+      "Block Place ESP": true
+    }
+  },
+  "BAHalo": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Student": "Shiroko",
+      "First Person": false,
+      "Lighting": false
+    }
+  },
+  "NoWeb": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Web": true,
+      "Liquids": false
+    }
+  },
+  "BedBreaker": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Radius": 3.0
+    }
+  },
+  "ClickGUI": {
+    "state": false,
+    "key": 54,
+    "values": {}
+  },
+  "TargetHUD": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Akarin",
+      "Background Alpha": 100.0,
+      "OutLine": false
+    }
+  },
+  "Scoreboard": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Left Layout": true,
+      "Red Numbers": false
+    }
+  },
+  "Armor": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "HUD": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Color Mode": "RainBow",
+      "Hotbar Mode": "New",
+      "Stats Mode": "Normal",
+      "Main Color": -263173,
+      "Second Color": -20673,
+      "Notification Mode": "Naven",
+      "Blur Iterations": 2.0,
+      "Blur Offset": 3.0,
+      "Bloom Iterations": 3.0,
+      "Bloom Offset": 1.0
+    }
+  },
+  "PlayerTracker": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AntiBot": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "EntityID": false,
+      "Sleep": false,
+      "NoArmor": false,
+      "Height": false,
+      "Ground": false,
+      "Dead": false,
+      "Health": false,
+      "HytGetName": false,
+      "Quick Macro GetNameTips": false,
+      "Quick Macro GetNameMode": "4v4"
+    }
+  },
+  "AutoHead": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Delay": 500.0,
+      "Health": 12.0
+    }
+  },
+  "AutoKnockBack": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Min Range": 3.0,
+      "Max Range": 8.0,
+      "Delay": 500.0,
+      "Predict": 1.5,
+      "AutoSwitch": true
+    }
+  },
+  "Teams": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "ArmorColor": true,
+      "Color": true,
+      "ScoreboardTeam": true
+    }
+  },
+  "ProgessBar": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "Protocol": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "HYT"
+    }
+  },
+  "NoSlow": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "Food": true,
+      "Bow": true
+    }
+  },
+  "ChestStealer": {
+    "state": true,
+    "key": 45,
+    "values": {
+      "Post": false,
+      "Chest": true,
+      "Furnace": false,
+      "BrewingStand": false,
+      "StealDelay": 60.0,
+      "PickTrash": false,
+      "Silent": false
+    }
+  },
+  "GuiMove": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "NoLiquid": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Grim"
+    }
+  },
+  "Speed": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Grim"
+    }
+  },
+  "ESP": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Armor": true,
+      "Health": true,
+      "Box": true,
+      "Name": true,
+      "Red Tags": false,
+      "Skeleton": false,
+      "SkeletonColor": -1,
+      "BoxWidth": 0.5
+    }
+  },
+  "BWScaffold": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Keep Y": false,
+      "Swing": true,
+      "Sprint": false,
+      "Watchdog": false,
+      "ADStrafe": false,
+      "Tower": false,
+      "Safe walk": false,
+      "BedWars": false,
+      "Telly": true,
+      "Up": false,
+      "Block Place ESP": true,
+      "TellyTicks": 2.96
+    }
+  },
+  "Health": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "Blink": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Olive",
+      "SlowRelease": false,
+      "ReleaseDelay": 1000.0
+    }
+  },
+  "FastPlace": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Ticks": 0.0
+    }
+  },
+  "TickBase": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "RayCast",
+      "MinDistance": 3.0,
+      "MaxDistance": 5.1,
+      "RangeMode": "Smart",
+      "MaxTime": 3.0,
+      "Delay": 5.0,
+      "TargetMaxHurtTime": 2.0,
+      "OnlyKillAura": true,
+      "AuraClick": true,
+      "OnlyPlayer": true,
+      "Debug": true,
+      "BetterAnimation": true,
+      "Reverse": false,
+      "MaxReverseRange": 2.8,
+      "MinReverseRange": 2.5,
+      "ReverseStopTime": 3.0,
+      "ReverseTickTime": 3.0,
+      "ReverseDelay": 5.0,
+      "ReverseTargetMaxHurtTime": 3.0
+    }
+  },
+  "Velocity": {
+    "state": true,
+    "key": -1,
+    "values": {
+      "Mode": "Watchdog",
+      "Bedwars": false,
+      "Lagback": false
+    }
+  },
+  "KillEffect": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Lightning": true,
+      "TipsKills": true,
+      "Explosion": true,
+      "Squid": true,
+      "KillSound": true
+    }
+  },
+  "BackTrack": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "BackTrackLength": 5.0
+    }
+  },
+  "MemoryFix": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Delay": 120.0,
+      "Limit": 80.0
+    }
+  },
+  "Projectile": {
+    "state": true,
+    "key": -1,
+    "values": {}
+  },
+  "MCF": {
+    "state": false,
+    "key": -1,
+    "values": {}
+  },
+  "AutoSoup": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Post": false,
+      "Health": 15.0,
+      "Min Delay": 300.0,
+      "Max Delay": 500.0,
+      "Drop Bowl": true,
+      "Legit": false
+    }
+  },
+  "Watermark": {
+    "state": false,
+    "key": -1,
+    "values": {
+      "Mode": "Olive"
+    }
+  }
+}
