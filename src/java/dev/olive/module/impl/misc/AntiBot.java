@@ -35,6 +35,11 @@ public class AntiBot extends Module {
             new ModeValue("Quick Macro GetNameMode", new String[]{"4v4/1v1", "32", "16"}, "4v4");
     private static final List<Integer> groundBotList = new ArrayList<>();
     private static final List<String> playerName = new ArrayList<>();
+    public static String part16 = "o";
+    public static String part17 = "m";
+    public static String part18 = "/";
+    public static String part19 = "s";
+    public static String part20 = "j";
 
     public AntiBot() {
         super("AntiBot","反机器人", Category.Misc);

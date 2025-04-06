@@ -182,7 +182,7 @@ public class ModuleList extends HUD {
             boolean usingVanillaFont = fontValue.get().equals("Minecraft");
 
             if (rectangle.getValue())
-                RenderUtil.drawRectWH(RenderUtil.width() - (1f) - 4, (float) (y - 4), 1f, (float) (heightVal),
+                RenderUtil.drawRectWH(RenderUtil.width() - (1f), (float) (y - 4), 1f, (float) (heightVal),
                         textcolor);
 
             getFont().drawStringWithShadow(displayText, (float) x, (float) ((y - 1 - (usingVanillaFont ? 2 : 0)) + getFont().getMiddleOfBox((float) heightVal)), ColorUtil.applyOpacity(textcolor, alphaAnimation));

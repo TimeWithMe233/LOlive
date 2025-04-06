@@ -10,7 +10,7 @@ java.lang.NullPointerException: Cannot invoke "java.awt.Font.getSize2D()" becaus
 	at dev.olive.ui.font.FontManager.init(FontManager.java:75)
 	at net.minecraft.client.Minecraft.startGame(Minecraft.java:482)
 	at net.minecraft.client.Minecraft.run(Minecraft.java:408)
-	at net.minecraft.client.main.Main.main(Main.java:111)
+	at Main.main(Main.java:111)
 	at Start.main(Start.java:8)
 
 
@@ -28,7 +28,7 @@ Stacktrace:
 Details:
 Stacktrace:
 	at net.minecraft.client.Minecraft.run(Minecraft.java:408)
-	at net.minecraft.client.main.Main.main(Main.java:111)
+	at Main.main(Main.java:111)
 	at Start.main(Start.java:8)
 
 -- System Details --

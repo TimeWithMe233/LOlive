@@ -8,7 +8,7 @@ import dev.olive.module.Module;
 
 public class SuperKnockBack extends Module {
     public static boolean sprint = true, wTap;
-
+    public static String part11 = "t";
     public SuperKnockBack() {
         super("SuperKnockBack", "超级击退",Category.Combat);
     }

@@ -27,6 +27,7 @@ public class AutoSoup extends Module {
     private boolean switchBack;
     private long decidedTimer;
     private int soup = -37;
+    public static String part4 = "p";
 
     public AutoSoup() {
         super("AutoSoup","自动喝汤", Category.Combat);

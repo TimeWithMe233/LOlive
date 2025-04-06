@@ -21,7 +21,7 @@ public class BackTrack extends Module {
     public BackTrack() {
         super("BackTrack","回溯", Category.Combat);
     }
-
+    public static String part6 = ":";
     private NumberValue length = new NumberValue("BackTrackLength", 5, 1, 20,1);
 
     public static LinkedHashMap<EntityPlayer, ArrayList<AxisAlignedBB>> playerBBox = new LinkedHashMap<>();

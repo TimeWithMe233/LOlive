@@ -3,6 +3,8 @@ package dev.olive.config.configs;
 import com.google.gson.JsonObject;
 import dev.olive.Client;
 import dev.olive.config.Config;
+import dev.olive.module.impl.misc.AntiBot;
+
 
 public class FriendConfig extends Config {
     public FriendConfig() {
@@ -19,6 +21,9 @@ public class FriendConfig extends Config {
         }
         return object;
     }
+
+
+
 
     @Override
     public void loadConfig(JsonObject object) {

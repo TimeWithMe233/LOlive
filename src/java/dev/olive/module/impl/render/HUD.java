@@ -10,7 +10,6 @@ import dev.olive.module.Module;
 import dev.olive.module.impl.combat.Gapple;
 import dev.olive.module.impl.player.BalanceTimer;
 import dev.olive.module.impl.player.Blink;
-import dev.olive.module.impl.world.BWScaffold;
 import dev.olive.module.impl.world.Scaffold;
 import dev.olive.ui.font.RapeMasterFontManager;
 
@@ -20,8 +19,6 @@ import dev.olive.utils.render.ColorUtil;
 import dev.olive.utils.render.RenderUtil;
 import dev.olive.utils.render.animation.Animation;
 import dev.olive.utils.render.animation.Direction;
-import dev.olive.utils.render.shader.KawaseBloom;
-import dev.olive.utils.render.shader.KawaseBlur;
 import dev.olive.utils.render.shader.ShaderElement;
 import dev.olive.value.impl.*;
 import net.minecraft.client.Minecraft;
@@ -54,7 +51,7 @@ public class HUD extends Module {
     private Framebuffer stencilFramebuffer = new Framebuffer(1, 1, false);
     private final RapeMasterFontManager productSansRegular = interSemiBold18;
     private Scaffold scaffold;
-    private BWScaffold bwScaffold;
+
     private Gapple gapple;
     private Blink blink;
     private ProgessBar progessBar;
@@ -65,7 +62,7 @@ public class HUD extends Module {
     @Override
     public void onEnable() {
         scaffold = getModule(Scaffold.class);
-        bwScaffold = getModule(BWScaffold.class);
+
         progessBar = getModule(ProgessBar.class);
         balanceTimer = getModule(BalanceTimer.class);
         blink = getModule(Blink.class);
@@ -208,9 +205,7 @@ public class HUD extends Module {
         if (mc.thePlayer != null && mc.theWorld != null) {
             scaffold.renderCounter();
         }
-        if (mc.thePlayer != null && mc.theWorld != null) {
-            bwScaffold.renderCounter();
-        }
+
         if (mc.thePlayer != null && mc.theWorld != null) {
             if (blink.mode.is("Olive")) {
                 blink.renderProgessBar();

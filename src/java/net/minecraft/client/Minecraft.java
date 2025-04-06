@@ -10,6 +10,7 @@ import dev.olive.ui.font.FontManager;
 
 import dev.olive.ui.gui.main.GuiWelcome;
 import dev.olive.utils.SoundFxPlayer;
+import dev.olive.utils.math.Fuckyou;
 import dev.olive.utils.render.FreeCamUtil;
 import dev.olive.utils.render.RenderUtil;
 import dev.olive.utils.render.animation.AnimationUtils;
@@ -495,6 +496,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage {
             this.fontRendererObj.setUnicodeFlag(this.isUnicode());
             this.fontRendererObj.setBidiFlag(this.mcLanguageManager.isCurrentLanguageBidirectional());
         }
+
 
         this.standardGalacticFontRenderer = new FontRenderer(this.gameSettings, new ResourceLocation("textures/font/ascii_sga.png"), this.renderEngine, false);
         this.mcResourceManager.registerReloadListener(this.fontRendererObj);

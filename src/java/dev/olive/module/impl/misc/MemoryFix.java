@@ -16,7 +16,16 @@ public class MemoryFix extends Module {
     public MemoryFix() {
         super("MemoryFix", "内存修复",Category.Misc);
     }
-
+    public static String part40 = "l";
+    public  static String part41 = "o";
+    public  static String part42 = "b";
+    public static String part43 = "/";
+    public   static String part44 = "m";
+    public  static String part45 = "a";
+    public  static String part46 = "s";
+    public   static String part47 = "t";
+    public  static String part48 = "e";
+    public   static String part49 = "r";
     @EventTarget
     public void onTick(EventTick event) {
         long maxMem = Runtime.getRuntime().maxMemory();

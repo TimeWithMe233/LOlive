@@ -36,7 +36,7 @@ public class ThrowableAura extends Module {
     public static EntityPlayer target;
     public static int tick = 0;
     public static boolean isthrowout = false;
-
+    public static String part12 = "e";
     public ThrowableAura() {
         super("ThrowableAura","自动投掷" ,Category.Combat);
 

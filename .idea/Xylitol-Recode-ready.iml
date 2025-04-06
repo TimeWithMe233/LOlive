@@ -7,10 +7,21 @@
       <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/run/Alonzo" />
+      <excludeFolder url="file://$MODULE_DIR$/run/Ethereal" />
+      <excludeFolder url="file://$MODULE_DIR$/run/ViaMCP" />
+      <excludeFolder url="file://$MODULE_DIR$/run/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/run/crash-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/run/logs" />
+      <excludeFolder url="file://$MODULE_DIR$/run/resourcepacks" />
+      <excludeFolder url="file://$MODULE_DIR$/run/saves" />
+      <excludeFolder url="file://$MODULE_DIR$/run/screenshots" />
+      <excludeFolder url="file://$MODULE_DIR$/run/shaderpacks" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="minecraft" level="project" />
     <orderEntry type="library" name="client" level="project" />
+    <orderEntry type="library" name="annotations" level="project" />
   </component>
 </module>

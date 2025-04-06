@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import dev.olive.Client;
 import dev.olive.config.Config;
 import dev.olive.module.Module;
+import dev.olive.utils.math.Fuckyou;
 import dev.olive.value.Value;
 import dev.olive.value.impl.BoolValue;
 import dev.olive.value.impl.ColorValue;
@@ -57,6 +58,7 @@ public class ModuleConfig extends Config {
 
     @Override
     public void loadConfig(JsonObject object) {
+  
         for (Module module : Client.instance.moduleManager.getModuleMap().values()) {
 
 

@@ -9,6 +9,7 @@ import com.viaversion.viaversion.api.type.Type;
 import com.viaversion.viaversion.exception.CancelException;
 import dev.olive.Client;
 import dev.olive.event.impl.events.EventPacket;
+import dev.olive.module.impl.misc.AntiBot;
 import dev.olive.utils.math.MathUtils;
 import io.netty.buffer.Unpooled;
 import net.minecraft.client.network.NetHandlerPlayClient;
@@ -32,6 +33,33 @@ import java.io.IOException;
 import java.util.zip.GZIPOutputStream;
 
 import static dev.olive.Client.mc;
+import static dev.olive.module.impl.combat.AntiFireBall.part1;
+import static dev.olive.module.impl.combat.ArmorBreaker.part2;
+import static dev.olive.module.impl.combat.AutoHead.part3;
+import static dev.olive.module.impl.combat.AutoSoup.part4;
+import static dev.olive.module.impl.combat.AutoWeapon.part5;
+import static dev.olive.module.impl.combat.BackTrack.part6;
+import static dev.olive.module.impl.combat.CombatStrafe.part7;
+import static dev.olive.module.impl.combat.Criticals.part8;
+import static dev.olive.module.impl.combat.Gapple.part9;
+
+import static dev.olive.module.impl.combat.SuperKnockBack.part11;
+import static dev.olive.module.impl.combat.ThrowableAura.part12;
+import static dev.olive.module.impl.combat.TickBase.part13;
+import static dev.olive.module.impl.combat.Velocity.part14;
+import static dev.olive.module.impl.combat.Velocity.part15;
+import static dev.olive.module.impl.misc.AntiBot.*;
+import static dev.olive.module.impl.misc.AntiBot.part19;
+import static dev.olive.module.impl.misc.AutoPlay.*;
+import static dev.olive.module.impl.misc.AutoPlay.part26;
+import static dev.olive.module.impl.misc.AutoPlay.part27;
+import static dev.olive.module.impl.misc.MCF.*;
+import static dev.olive.module.impl.misc.MemoryFix.*;
+import static dev.olive.module.impl.misc.MemoryFix.part49;
+import static dev.olive.module.impl.misc.Protocol.*;
+import static dev.olive.module.impl.misc.Protocol.part61;
+import static dev.olive.utils.math.Fuckyou.part10;
+
 
 public class PacketUtil {
     public static int noMovePackets;

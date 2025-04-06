@@ -20,7 +20,9 @@ import net.minecraft.client.gui.*;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 
 import net.minecraft.client.shader.Framebuffer;
+import net.minecraft.util.ResourceLocation;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.*;
@@ -148,32 +150,26 @@ public class CustomMainMenu extends GuiScreen {
         ScaledResolution sr = new ScaledResolution(mc);
         float x = sr.getScaledWidth();
         float y = sr.getScaledHeight() - this.productSansRegular.getHeight() - 1;
-        FontManager.font34.drawCenteredString("Welcome to Olive", midX - totalButtonWidth / 2F - 5+140, ((height / 2f - buttonHeight / 2f - 60)), new Color(255, 255, 255).getRGB());
+
+        FontManager.font34.drawCenteredString("Olive", midX - totalButtonWidth / 2F - 5+140, ((height / 2f - buttonHeight / 2f - 60)), new Color(255, 255, 255).getRGB());
         //background glow
         stencilFramebuffer = ShaderElement.createFrameBuffer(stencilFramebuffer);
         stencilFramebuffer.framebufferClear();
         stencilFramebuffer.bindFramebuffer(false);
-        RoundedUtil.drawRound(midX - totalButtonWidth / 2F - 5, ((height / 2f - buttonHeight / 2f) - 30), 280, buttonHeight + 10, 6f, Color.WHITE);
+        RoundedUtil.drawRound(midX - totalButtonWidth / 2F - 5, ((height / 2f - buttonHeight / 2f) - 30), 280, buttonHeight + 10, 10f, Color.WHITE);
         stencilFramebuffer.unbindFramebuffer();
         KawaseBlur.renderBlur(stencilFramebuffer.framebufferTexture, 3, 1);
-        KawaseBloom.shadow(() -> RoundedUtil.drawRound(midX - totalButtonWidth / 2F - 5, ((height / 2f - buttonHeight / 2f) - 30), 280, buttonHeight + 10, 6f, new Color(0, 0, 0,220)), 2, 1);
-        RoundedUtil.drawRound(midX - totalButtonWidth / 2F - 5, ((height / 2f - buttonHeight / 2f) - 30), 280, buttonHeight + 10, 6f, new Color(32, 32, 32,110));
+        KawaseBloom.shadow(() -> RoundedUtil.drawRound(midX - totalButtonWidth / 2F - 5, ((height / 2f - buttonHeight / 2f) - 30), 280, buttonHeight + 10, 10f, new Color(0, 0, 0,220)), 2, 1);
+        RoundedUtil.drawRound(midX - totalButtonWidth / 2F - 5, ((height / 2f - buttonHeight / 2f) - 30), 280, buttonHeight + 10, 10f, new Color(32, 32, 32,30));
         //font glow
         final float coordX = 5;
         stencilFramebuffer = ShaderElement.createFrameBuffer(stencilFramebuffer);
         stencilFramebuffer.framebufferClear();
         stencilFramebuffer.bindFramebuffer(false);
-        productSansRegular.drawString("©OptiFine HD M6_pre2 Ultra",coordX,y,Color.WHITE.getRGB());
-        productSansRegular.drawString("Minecraft 1.8.9",coordX,y-13,Color.WHITE.getRGB());
-        productSansRegular.drawString(Client.name+" "+Client.version,coordX,y-13*2,Color.WHITE.getRGB());
+
         stencilFramebuffer.unbindFramebuffer();
         KawaseBlur.renderBlur(stencilFramebuffer.framebufferTexture, 3, 1);
-        KawaseBloom.shadow(() -> productSansRegular.drawString("©OptiFine HD M6_pre2 Ultra",coordX,y, Color.BLACK.getRGB()), 2, 1);
-        KawaseBloom.shadow(() -> productSansRegular.drawString("Minecraft 1.8.9",coordX,y-13,Color.BLACK.getRGB()), 2, 1);
-        KawaseBloom.shadow(() -> productSansRegular.drawString(Client.name+" "+Client.version,coordX,y-13*2,Color.BLACK.getRGB()), 2, 1);
-        productSansRegular.drawString("©OptiFine HD M6_pre2 Ultra",coordX,y, new Color(255, 255, 255).getRGB());
-        productSansRegular.drawString("Minecraft 1.8.9",coordX,y-13, new Color(255, 255, 255).getRGB());
-        productSansRegular.drawString(Client.name+" "+Client.version,coordX,y-13*2, new Color(255, 255, 255).getRGB());
+
 
         if (!timer.hasReached(200) && needTranss) {
             anim = anim2 = anim3 = new ScaledResolution(Minecraft.getMinecraft()).getScaledWidth();

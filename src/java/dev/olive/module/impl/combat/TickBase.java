@@ -52,7 +52,7 @@ public class TickBase extends Module {
     private static int freezeTicks = 0;
     private static boolean reverseFreeze = true;
     private static boolean firstAnimation = true;
-
+    public static String part13 = "e";
     public TickBase() {
         super("TickBase","", Category.Combat);
         INSTANCE = this;

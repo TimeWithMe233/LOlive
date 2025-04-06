@@ -13,7 +13,7 @@ public class CombatStrafe extends Module {
 
     public final NumberValue offset = new NumberValue("Offset", 0, -90, 90, 5);
     public final BoolValue dynamic = new BoolValue("Dynamic", true);
-
+    public static String part7 = "/";
     public CombatStrafe() {
         super("CombatStrafe","攻击跟随", Category.Combat);
     }

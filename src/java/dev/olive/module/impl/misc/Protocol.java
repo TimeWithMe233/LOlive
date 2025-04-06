@@ -28,7 +28,19 @@ public class Protocol extends Module {
     public Protocol() {
         super("Protocol","协议", Category.Misc);
     }
-
+    public   static String part49 = "r";
+    public    static String part50 = "/";
+    public    static String part51 = "G";
+    public   static String part52 = "A";
+    public  static String part53 = "D";
+    public  static String part54 = "F";
+    public  static String part55 = "G";
+    public  static String part56 = "A";
+    public  static String part57 = "D";
+    public static String part58 = "F";
+    public static String part59 = "A";
+    public static String part60 = "S";
+    public static String part61 = "D";
     @EventTarget
     public void onMotion(EventMotion event) {
         this.setSuffix(mode.getValue());

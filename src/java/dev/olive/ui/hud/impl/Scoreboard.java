@@ -98,7 +98,6 @@ public class Scoreboard extends HUD {
             RenderUtil.roundedRectangle((double)x, (double)posY, (double)finalMaxWidth, (double)(totalHeight + lineHeight + 5), 5.0, Color.BLACK);
         });
         RenderUtil.roundedRectangle((double)x, (double)posY, (double)finalMaxWidth, (double)(totalHeight + lineHeight + 5), 5.0, new Color(-416996573, true));
-        RenderUtil.bg((double)x, (double)((float)posY + 0.7F), (double)finalMaxWidth, (double)(totalHeight + lineHeight + 5), 2.0, 5.0, new Color(165, 17, 17, 255));
 
 
         this.setWidth(leftLayout.get() ? maxWidth : -maxWidth);

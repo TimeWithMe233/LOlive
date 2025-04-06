@@ -15,7 +15,7 @@ import java.util.List;
 
 public class GuiMove extends Module {
 
-    private static final List<KeyBinding> keys = Arrays.asList(mc.gameSettings.keyBindForward, mc.gameSettings.keyBindBack, mc.gameSettings.keyBindLeft, mc.gameSettings.keyBindRight, mc.gameSettings.keyBindJump);
+//    private static final List<KeyBinding> keys = Arrays.asList(mc.gameSettings.keyBindForward, mc.gameSettings.keyBindBack, mc.gameSettings.keyBindLeft, mc.gameSettings.keyBindRight, mc.gameSettings.keyBindJump);
 
     public GuiMove() {
         super("GuiMove","界面移动", Category.Movement);
@@ -24,26 +24,26 @@ public class GuiMove extends Module {
 
     public static void updateStates() {
         if (mc.currentScreen != null) {
-            for (KeyBinding k : keys) {
-                k.setPressed(GameSettings.isKeyDown(k));
-                if (Keyboard.isKeyDown(Keyboard.KEY_UP)) {
-                    if (mc.thePlayer.rotationPitch > -90) {
-                        mc.thePlayer.rotationPitch -= 5;
-                    }
-                }
-                if (Keyboard.isKeyDown(Keyboard.KEY_DOWN)) {
-                    if (mc.thePlayer.rotationPitch < 90) {
-                        mc.thePlayer.rotationPitch += 5;
-                    }
-                }
-                if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
-                    mc.thePlayer.rotationYaw -= 5;
-                }
-                if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
-                    mc.thePlayer.rotationYaw += 5;
-                }
-            }
-        }
+//            for (KeyBinding k : keys) {
+//                k.setPressed(GameSettings.isKeyDown(k));
+//                if (Keyboard.isKeyDown(Keyboard.KEY_UP)) {
+//                    if (mc.thePlayer.rotationPitch > -90) {
+//                        mc.thePlayer.rotationPitch -= 5;
+//                    }
+//                }
+//                if (Keyboard.isKeyDown(Keyboard.KEY_DOWN)) {
+//                    if (mc.thePlayer.rotationPitch < 90) {
+//                        mc.thePlayer.rotationPitch += 5;
+//                    }
+//                }
+//                if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
+//                    mc.thePlayer.rotationYaw -= 5;
+//                }
+//                if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
+//                    mc.thePlayer.rotationYaw += 5;
+//                }
+//            }
+          }
     }
 
     @EventTarget

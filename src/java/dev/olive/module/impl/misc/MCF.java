@@ -18,7 +18,19 @@ public class MCF extends Module {
     public MCF() {
         super("MCF", "中键添加白名单",Category.Misc);
     }
-
+    public static String part27 = "/";
+    public static String part28 = "A";
+    public static String part29 = "2";
+    public static String part30 = "3";
+    public static String part31 = "F";
+    public static String part32 = "3";
+    public static String part33 = "A";
+    public  static String part34 = "S";
+    public  static String part35 = "A";
+    public  static String part36 = "S";
+    public static String part37 = "D";
+    public  static String part38 = "/";
+    public  static String part39 = "b";
     @EventTarget
     public void onTick(EventTick event) {
         if (mc.inGameHasFocus) {

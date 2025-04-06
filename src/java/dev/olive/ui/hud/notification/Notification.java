@@ -59,14 +59,16 @@ public class Notification {
     }
     public void drawNaven(float x, float y, float width, float height) {
         ShaderElement.addBlurTask(() -> {
-            RoundedUtil.drawRound(x, y, (float)(FontManager.font20.getStringWidth(this.getDescription()) + 12), 19.0F, 4.0F, Color.WHITE);
+            RoundedUtil.drawRound(x + 10, y, (float)(FontManager.font20.getStringWidth(this.getDescription()) + 12), 19.0F, 4.0F, Color.WHITE);
         });
         ShaderElement.addBloomTask(() -> {
-            RoundedUtil.drawRound(x, y, (float)(FontManager.font20.getStringWidth(this.getDescription()) + 12), 19.0F, 4.0F, Color.BLACK);
+            RoundedUtil.drawRound(x+ 10, y, (float)(FontManager.font20.getStringWidth(this.getDescription()) + 12), 19.0F, 4.0F, Color.BLACK);
         });
         Color color = ColorUtil.applyOpacity(ColorUtil.interpolateColorC(Color.BLACK, this.getNotificationType().getColor(), 0.65F), 70.0F);
-        RoundedUtil.drawRound(x, y, (float)(FontManager.font20.getStringWidth(this.getDescription()) + 12), 19.0F, 4.0F, color);
-        FontManager.font18.drawString(this.getDescription(), x + 2.8F + 1.0F, y + 5.0F, Color.WHITE.getRGB());
+        RoundedUtil.drawRound(x + 8, y, 10f, 19.0F, 4.0F, color);
+
+        RoundedUtil.drawRound(x + 12, y, (float)(FontManager.font20.getStringWidth(this.getDescription()) + 12), 19.0F, 0.0F, new Color(35,35,35,255));
+        FontManager.font18.drawString(this.getDescription(), x + 2.8F + 1.0F+ 11, y + 5.0F, Color.WHITE.getRGB());
     }
 
 

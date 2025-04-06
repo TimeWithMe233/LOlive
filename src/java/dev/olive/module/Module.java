@@ -80,6 +80,11 @@ public class Module {
     public void onDisable() {
 
     }
+
+    public <M extends Module> boolean isEnabled(Class<M> module) {
+        Module mod = Client.instance.getModuleManager().getModule(module);
+        return mod != null && mod.state;
+    }
     @Getter
     @Setter
     private boolean expanded;

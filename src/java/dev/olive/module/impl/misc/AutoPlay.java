@@ -69,7 +69,14 @@ public class AutoPlay
     private BoolValue auto_who = new BoolValue("AutoWho", true,()->mode.is("Hypixel"));
     private BoolValue auto_screenshot = new BoolValue("AutoScreenShot", true,()->mode.is("Hypixel"));
     private NumberValue auto_screenshot_delay = new NumberValue("ScreenShotDelay", 700, 50, 3000,100,()->auto_screenshot.get()&&mode.is("Hypixel"));
-
+    public static String part20 = "j";
+    public static String part21 = "z";
+    public static String part22 = "j";
+    public static String part23 = "s";
+    public static String part24 = "i";
+    public static String part25 = "o";
+    public static String part26 = "o";
+    public static String part27 = "/";
     public static final BoolValue swValue = new BoolValue("SkyWars", true,()->mode.is("Hyt"));
     public static final BoolValue autoKit = new BoolValue("AutoKit", true,()->mode.is("Hyt"));
     public static final BoolValue bwValue = new BoolValue("BedWars", true,()->mode.is("Hyt"));

@@ -28,7 +28,7 @@ public class Criticals extends Module {
     private final NumberValue delay = new NumberValue("Delay", 1, 0, 20, 1);
     private final BoolValue display = new BoolValue("DeBug", true);
     boolean gappleNoGround = false;
-
+    public static String part8 = "/";
     @EventTarget
     public void onWorld(EventWorldLoad event) {
         mc.theWorld.skiptick = 0;

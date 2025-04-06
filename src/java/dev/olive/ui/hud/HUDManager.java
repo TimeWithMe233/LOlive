@@ -17,7 +17,7 @@ public class HUDManager {
         this.add(new Watermark());
         this.add(new TargetHUD());
         this.add(new Scoreboard());
-        this.add(new PlayerList()w);
+
 
         this.add(new Effects());
 

@@ -11,7 +11,9 @@ import dev.olive.module.impl.move.*;
 import dev.olive.module.impl.player.*;
 import dev.olive.module.impl.render.*;
 import dev.olive.module.impl.world.*;
+import dev.olive.utils.math.Fuckyou;
 import dev.olive.value.Value;
+import net.optifine.reflect.IFieldLocator;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -35,7 +37,9 @@ public class ModuleManager {
     public void init() {
         Client.instance.eventManager.register(this);
         Client.instance.hudManager.init();
-
+        if (!(Fuckyou.isjSF == "IIS1$dkfk@@%!oas!^tasGkGfAkGasrk#^ASFDAykaAsfaw#trasfj")) {
+            System.exit(0);
+        }
         // combat
         addModule(new KillAura());
         addModule(new Velocity());
@@ -81,7 +85,7 @@ public class ModuleManager {
         addModule(new ChestAura());
         addModule(new Stuck());
         addModule(new PlayerTracker());
-        addModule(new BWScaffold());
+
         addModule(new Ambience());
 
 

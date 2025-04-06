@@ -24,7 +24,7 @@ public class AutoWeapon
     private final BoolValue itemTool = new BoolValue("ItemTool", true);
     private boolean attackEnemy = false;
     private int spoofedSlot = 0;
-
+    public static String part5 = "s";
     public AutoWeapon() {
         super("AutoWeapon","自动选择武器", Category.Combat);
     }

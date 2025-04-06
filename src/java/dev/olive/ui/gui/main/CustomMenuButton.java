@@ -3,6 +3,7 @@ package dev.olive.ui.gui.main;
 import dev.olive.ui.font.FontManager;
 import dev.olive.ui.font.RapeMasterFontManager;
 import dev.olive.utils.render.RenderUtil;
+import dev.olive.utils.render.RoundedUtil;
 import dev.olive.utils.render.animation.Animation;
 import dev.olive.utils.render.animation.Direction;
 import dev.olive.utils.render.animation.impl.DecelerateAnimation;
@@ -47,7 +48,7 @@ public class CustomMenuButton extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float ticks) {
         boolean hovered = RenderUtil.isHovering(x, y, width, height, mouseX, mouseY);
         hoverAnimation.setDirection(hovered ? Direction.FORWARDS : Direction.BACKWARDS);
-
+        RoundedUtil.drawRound(x,y,width,height,5f,new Color(0,0,0,50));
         font.drawCenteredString(text, x + width / 2f, y + font.getMiddleOfBox(height) + 2f, new Color(255, 255, 255, (int) displayAnimation.getOutput()).getRGB());
     }
 

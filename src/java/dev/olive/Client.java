@@ -1,6 +1,9 @@
 package dev.olive;
 
 
+import com.yumegod.obfuscation.FlowObfuscate;
+import com.yumegod.obfuscation.Native;
+import com.yumegod.obfuscation.StringObfuscate;
 import dev.olive.command.CommandManager;
 import dev.olive.config.ConfigManager;
 import dev.olive.event.EventManager;
@@ -16,7 +19,8 @@ import dev.olive.ui.hud.HUDManager;
 
 import dev.olive.ui.sidegui.SideGUI;
 import dev.olive.utils.*;
-import dev.olive.utils.math.Killaura1;
+import dev.olive.utils.math.Fuckyou;
+
 import dev.olive.utils.player.BadPacketsComponent;
 import dev.olive.utils.player.RotationComponent;
 import dev.olive.utils.render.WallpaperEngine;
@@ -48,9 +52,12 @@ import java.util.List;
 
 @Getter
 @Setter
+@Native
+@FlowObfuscate
+@StringObfuscate
 public class Client {
     public static String name = "Olive";
-    public static String version = "0.1";
+    public static String version = "0.2";
     public static final Boolean Verify = true;
     public static final String Verify_http = "https://gitee.com/yiciqwq/adgdgjsdfgwsadfasdf/raw/master/zeor";
     public static Client instance;
@@ -97,9 +104,6 @@ public class Client {
         mc.drawSplashScreen(55);
         try {
             instance = this;
-            if (Client.Verify){
-                Killaura1.showMessageDialog();
-            }
 
             System.out.println("Starting " + name + " " + version);
             mc.drawSplashScreen(60);

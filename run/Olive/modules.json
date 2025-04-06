@@ -1,9 +1,4 @@
 {
-  "PlayerList": {
-    "state": false,
-    "key": -1,
-    "values": {}
-  },
   "AntiFireBall": {
     "state": false,
     "key": -1,
@@ -165,13 +160,13 @@
     }
   },
   "TargetStrafe": {
-    "state": false,
+    "state": true,
     "key": -1,
     "values": {
-      "Mode": "Grim",
-      "LagBack Check": true,
-      "Scaffold/Fly Check": true,
-      "Blink Check": true
+      "Range": 1.0000000149011612,
+      "Hold Jump": false,
+      "Render": true,
+      "Behind": false
     }
   },
   "ItemPhysics": {
@@ -185,11 +180,11 @@
     "values": {}
   },
   "InventoryManager": {
-    "state": true,
+    "state": false,
     "key": 45,
     "values": {
       "Silent Inventory": true,
-      "Delay": 4.0,
+      "Delay": 0.0,
       "Sword slot": 0.0,
       "Stack slot": 1.0,
       "Axe slot": 2.0,
@@ -203,16 +198,16 @@
     "key": -1,
     "values": {
       "Important": true,
-      "Rectangle": false,
+      "Rectangle": true,
       "RainBow": true,
-      "Chinese": true,
+      "Chinese": false,
       "Suffix": true,
       "Height": 13.0,
       "Font": "Client",
       "Animation": "ScaleIn",
       "Font Size": "16",
-      "Background": false,
-      "Background Alpha": 0.34
+      "Background": true,
+      "Background Alpha": 0.51
     }
   },
   "AutoPlay": {
@@ -309,9 +304,9 @@
       "Attack Mode": "Post",
       "Rotation Mode": "Normal",
       "Aim Point": "Closest",
-      "AutoBlock mode": "Watchdog",
+      "AutoBlock mode": "Off",
       "No hit on first tick": false,
-      "Mark mode": "Rectangle",
+      "Mark mode": "Off",
       "CPS": 13.0,
       "Range": 3.26,
       "Block Range": 4.0,
@@ -322,8 +317,8 @@
       "Toggle strict when alt key": false,
       "RayCast": true,
       "Player": true,
-      "Animal": false,
-      "Mob": false,
+      "Animal": true,
+      "Mob": true,
       "Invisible": true,
       "MarkAlpha": 255.0,
       "MarkColor": -65536,
@@ -372,7 +367,7 @@
       "Block Place ESP": true,
       "Rotations": true,
       "Rotation Mode": "Watchdog",
-      "Sprint Mode": "Watchdog",
+      "Sprint Mode": "Legit",
       "Watchdog Mode": "Jump SameY",
       "Tower Mode": "Watchdog"
     }
@@ -407,7 +402,7 @@
     "values": {}
   },
   "TargetHUD": {
-    "state": true,
+    "state": false,
     "key": -1,
     "values": {
       "OutLine": true
@@ -509,14 +504,14 @@
     }
   },
   "ChestStealer": {
-    "state": true,
+    "state": false,
     "key": 45,
     "values": {
       "Post": true,
       "Chest": true,
       "Furnace": true,
       "BrewingStand": true,
-      "StealDelay": 100.0,
+      "StealDelay": 0.0,
       "PickTrash": true,
       "Silent": false
     }
@@ -542,8 +537,8 @@
       "Fast Fall": false,
       "Hurt Time Check": true,
       "Fast Fall Mode": "7 Tick",
-      "Disable While Scaffold": true,
-      "Friction Override": true,
+      "Disable While Scaffold": false,
+      "Friction Override": false,
       "Extra Strafe": false,
       "More Expand": false,
       "Ignore Damage": true,
@@ -554,10 +549,10 @@
       "Damage Boost": false,
       "Ticks": 5.0,
       "No Bob": false,
-      "Force Stop": true,
-      "Lag Back Check": true,
-      "Liquid Check": true,
-      "Gui Check": true,
+      "Force Stop": false,
+      "Lag Back Check": false,
+      "Liquid Check": false,
+      "Gui Check": false,
       "Print Off Ground Ticks": false,
       "Vanilla Speed": 0.5,
       "Vanilla Pull Down": 0.5
@@ -575,24 +570,6 @@
       "Skeleton": false,
       "SkeletonColor": -1,
       "BoxWidth": 0.5
-    }
-  },
-  "BWScaffold": {
-    "state": false,
-    "key": -1,
-    "values": {
-      "Keep Y": false,
-      "Swing": true,
-      "Sprint": false,
-      "Watchdog": false,
-      "ADStrafe": false,
-      "Tower": false,
-      "Safe walk": false,
-      "BedWars": false,
-      "Telly": true,
-      "Up": false,
-      "Block Place ESP": true,
-      "TellyTicks": 2.96
     }
   },
   "Health": {
@@ -617,7 +594,7 @@
     }
   },
   "TickBase": {
-    "state": true,
+    "state": false,
     "key": -1,
     "values": {
       "Mode": "RayCast",

@@ -1,164 +1,174 @@
+
 package dev.olive.module.impl.move;
 
-import dev.olive.Client;
+import dev.olive.event.annotations.EventPriority;
 import dev.olive.event.annotations.EventTarget;
 import dev.olive.event.impl.events.*;
 import dev.olive.module.Category;
 import dev.olive.module.Module;
 import dev.olive.module.impl.combat.KillAura;
-import dev.olive.module.impl.misc.AntiBot;
-import dev.olive.module.impl.misc.Teams;
-import dev.olive.module.impl.player.Blink;
 import dev.olive.module.impl.world.Scaffold;
-import dev.olive.ui.hud.notification.NotificationManager;
-import dev.olive.ui.hud.notification.NotificationType;
-import dev.olive.utils.player.AttackUtil;
-import dev.olive.utils.player.MoveUtil;
+import dev.olive.utils.player.MovementUtils;
 import dev.olive.utils.player.PlayerUtil;
-import dev.olive.utils.player.RotationUtil;
 import dev.olive.value.impl.BoolValue;
-import dev.olive.value.impl.ModeValue;
 import dev.olive.value.impl.NumberValue;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.client.settings.GameSettings;
-import net.minecraft.entity.Entity;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityArmorStand;
-import net.minecraft.entity.item.EntityBoat;
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.projectile.EntityFishHook;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S08PacketPlayerPosLook;
-import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
-import org.lwjgl.input.Keyboard;
+import org.lwjgl.opengl.GL11;
+import org.lwjglx.input.Keyboard;
 
-import java.util.Iterator;
-import java.util.function.Predicate;
-import java.util.stream.StreamSupport;
 
-public class TargetStrafe
-        extends Module {
-    private final ModeValue mode = new ModeValue("Mode", new String[]{"Grim"},  "Grim");
-    private final BoolValue lagBackCheck = new BoolValue("LagBack Check", true);
-    private final BoolValue scaffoldCheck = new BoolValue("Scaffold/Fly Check", true);
-    private final BoolValue blinkCheck = new BoolValue("Blink Check", true);
+public class TargetStrafe extends Module {
+
+    public final NumberValue range = new NumberValue("Range", 1, 0.1f, 6, 0.1f);
+    public final BoolValue holdJump = new BoolValue("Hold Jump", false);
+    public final BoolValue render = new BoolValue("Render", true);
+    public final BoolValue behind = new BoolValue("Behind", true);
+    public float yaw;
+    private boolean left, colliding;
+    public boolean active;
+    public EntityLivingBase target;
 
     public TargetStrafe() {
-        super("TargetStrafe","转圈圈" ,Category.Combat);
+        super("TargetStrafe","转圈圈", Category.Movement);
     }
 
-    @Override
-    public void onEnable() {
-        if (mc.thePlayer == null) return;
-        super.onEnable();
-    }
-
-    @Override
-    public void onDisable() {
-        mc.timer.timerSpeed = 1.0f;
-        super.onDisable();
-    }
 
     @EventTarget
-    private void onPacketReceive(EventPacket event) {
-        if (event.getEventType() == EventPacket.EventState.RECEIVE) {
-            Packet<?> packet = event.getPacket();
-            if (packet instanceof S08PacketPlayerPosLook) {
-                if (this.lagBackCheck.get()) {
-                    NotificationManager.post(NotificationType.WARNING, "Speed", "LagBack detected");
-                    this.setState(false);
-                }
-            }
-        }
-    }
-    @EventTarget
-    private void onUpdate(PreUpdateEvent event) {
-        this.setSuffix(mode.get());
-        if ((!blinkCheck.get() || !Client.instance.moduleManager.getModule(Blink.class).getState())) {
-            if (scaffoldCheck.get()) {
-                Client.instance.moduleManager.getModule(Scaffold.class);
-            }
+    @EventPriority(3)
+    public void onJump(EventJump event) {
+        if (target != null && active) {
+            event.setYaw(yaw);
         }
     }
 
     @EventTarget
-    private void onPreMotion(EventMotion event) {
-        if (event.isPre()) {
-            if ((blinkCheck.get() && Client.instance.moduleManager.getModule(Blink.class).getState()) || (scaffoldCheck.get() && Client.instance.moduleManager.getModule(Scaffold.class).getState())) {
+    @EventPriority(3)
+    public void onStrafe(EventStrafe event) {
+        if (target != null && active) {
+            event.setYaw(yaw);
+        }
+    }
+
+    @EventTarget
+    @EventPriority(3)
+    public void onUpdate(EventUpdate event) {
+
+        Speed speed = getModule(Speed.class);
+
+        if (holdJump.get() && !Keyboard.isKeyDown(mc.gameSettings.keyBindJump.getKeyCode()) || !(mc.gameSettings.keyBindForward.isKeyDown() && (speed != null && speed.state)) || !isEnabled(KillAura.class) || isEnabled(Scaffold.class)) {
+            active = false;
+            target = null;
+            return;
+        }
+
+        getModule(KillAura.class);
+        target = KillAura.target;
+
+        if (target == null) {
+            active = false;
+            return;
+        }
+
+        if(!speed.couldStrafe)
+            return;
+
+        if (mc.thePlayer.isCollidedHorizontally || !PlayerUtil.isBlockUnder(5, false)) {
+            if (!colliding) {
+                MovementUtils.strafe();
+                left = !left;
+            }
+            colliding = true;
+        } else {
+            colliding = false;
+        }
+
+        active = true;
+
+
+        float yaw;
+
+        if (behind.get()) {
+            yaw = target.rotationYaw + 180;
+        } else {
+            yaw = getYaw(mc.thePlayer, new Vec3(target.posX, target.posY, target.posZ)) + (90 + 45) * (left ? -1 : 1);
+        }
+
+        final double range = this.range.get() + Math.random() / 100f;
+        final double posX = -MathHelper.sin((float) Math.toRadians(yaw)) * range + target.posX;
+        final double posZ = MathHelper.cos((float) Math.toRadians(yaw)) * range + target.posZ;
+
+        yaw = getYaw(mc.thePlayer, new Vec3(posX, target.posY, posZ));
+
+        this.yaw = yaw;
+    }
+
+    public static float getYaw(EntityPlayer from, Vec3 pos) {
+        return from.rotationYaw + MathHelper.wrapAngleTo180_float((float) Math.toDegrees(Math.atan2(pos.zCoord - from.posZ, pos.xCoord - from.posX)) - 90f - from.rotationYaw);
+    }
+
+    @EventTarget
+    public void onMoveInput(EventMoveInput event){
+        if(Keyboard.isKeyDown(mc.gameSettings.keyBindJump.getKeyCode()) && holdJump.get() && active)
+            event.setJump(false);
+    }
+
+    @EventTarget
+    public void onRender3D(EventRender3D event) {
+        if (render.get()) {
+            if (target == null) {
                 return;
             }
-            if (isGapple()) return;
-            if (mode.is("Grim")) {
-                AxisAlignedBB playerBox = mc.thePlayer.boundingBox.expand(1.0D, 1.0D, 1.0D);
-                int c = 0;
-                Iterator<Entity> entitys = mc.theWorld.loadedEntityList.iterator();
-                while (true) {
-                    Entity entity;
-                    do {
-                        if (!entitys.hasNext()) {
-                            if (c > 0 && MoveUtil.isMoving()) {
-                                double strafeOffset = (double) Math.min(c, 3) * 0.08D;
-                                float yaw = this.getMoveYaw();
-                                double mx = -Math.sin(Math.toRadians(yaw));
-                                double mz = Math.cos(Math.toRadians(yaw));
-                                mc.thePlayer.addVelocity(mx * strafeOffset, 0.0D, mz * strafeOffset);
-                                if (c < 4 && KillAura.target != null && this.shouldFollow()) {
-                                    mc.gameSettings.keyBindLeft.pressed = true;
-                                } else {
-                                    mc.gameSettings.keyBindLeft.pressed = GameSettings.isKeyDown(mc.gameSettings.keyBindLeft);
-                                }
-                                return;
-                            } else {
-                                mc.gameSettings.keyBindLeft.pressed = GameSettings.isKeyDown(mc.gameSettings.keyBindLeft);
-                                return;
-                            }
-                        }
+            GL11.glPushMatrix();
+            GL11.glTranslated(
+                    target.lastTickPosX + (target.posX - target.lastTickPosX) * mc.timer.renderPartialTicks - mc.getRenderManager().renderPosX,
+                    target.lastTickPosY + (target.posY - target.lastTickPosY) * mc.timer.renderPartialTicks - mc.getRenderManager().renderPosY,
+                    target.lastTickPosZ + (target.posZ - target.lastTickPosZ) * mc.timer.renderPartialTicks - mc.getRenderManager().renderPosZ
+            );
+            GL11.glEnable(GL11.GL_BLEND);
+            GL11.glEnable(GL11.GL_LINE_SMOOTH);
+            GL11.glDisable(GL11.GL_TEXTURE_2D);
+            GL11.glDisable(GL11.GL_DEPTH_TEST);
+            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+            GL11.glRotatef(90F, 1F, 0F, 0F);
 
-                        entity = entitys.next();
-                    } while (!(entity instanceof EntityLivingBase) && !(entity instanceof EntityBoat) && !(entity instanceof EntityMinecart) && !(entity instanceof EntityFishHook));
+            GL11.glLineWidth(3 + 7.25F);
 
-                    if (!(entity instanceof EntityArmorStand)
-                            && entity.getEntityId() != mc.thePlayer.getEntityId()
-                            && playerBox.intersectsWith(entity.boundingBox)
-                            && entity.getEntityId() != -8 && entity.getEntityId() != -1337
-                            && !(Client.instance.moduleManager.getModule(Blink.class)).getState()) {
-                        ++c;
-                    }
-                }
-            }
-        }
+            GL11.glColor3f(0F, 0F, 0F);
+            GL11.glBegin(GL11.GL_LINE_LOOP);
 
-    }
-
-
-    public boolean shouldFollow() {
-        return this.getState() && mc.gameSettings.keyBindJump.isKeyDown();
-    }
-
-    private float getMoveYaw() {
-        EntityPlayerSP thePlayer = mc.thePlayer;
-        float moveYaw = thePlayer.rotationYaw;
-        if (thePlayer.moveForward != 0.0F && thePlayer.moveStrafing == 0.0F) {
-            moveYaw += thePlayer.moveForward > 0.0F ? 0.0F : 180.0F;
-        } else if (thePlayer.moveForward != 0.0F) {
-            if (thePlayer.moveForward > 0.0F) {
-                moveYaw += thePlayer.moveStrafing > 0.0F ? -45.0F : 45.0F;
-            } else {
-                moveYaw -= thePlayer.moveStrafing > 0.0F ? -45.0F : 45.0F;
+            for (int i = 0; i <= 360; i += 30) {
+                GL11.glVertex2f((float) (Math.cos(i * Math.PI / 180.0) * range.get()), (float) (Math.sin(i * Math.PI / 180.0) * range.get()));
             }
 
-            moveYaw += thePlayer.moveForward > 0.0F ? 0.0F : 180.0F;
-        } else if (thePlayer.moveStrafing != 0.0F) {
-            moveYaw += thePlayer.moveStrafing > 0.0F ? -70.0F : 70.0F;
-        }
+            GL11.glEnd();
 
-        if (KillAura.target != null && mc.gameSettings.keyBindJump.isKeyDown()) {
-            moveYaw = Client.instance.rotationManager.rotation.x;
-        }
+            GL11.glLineWidth(3);
+            GL11.glBegin(GL11.GL_LINE_LOOP);
 
-        return moveYaw;
+            for (int i = 0; i <= 360; i += 30) {
+                if (active)
+                    GL11.glColor4f(0.5f, 1, 0.5f, 1f);
+                else
+                    GL11.glColor4f(1f, 1f, 1f, 1f);
+
+                GL11.glVertex2f((float) (Math.cos(i * Math.PI / 180.0) * range.get()), (float) (Math.sin(i * Math.PI / 180.0) * range.get()));
+            }
+
+            GL11.glEnd();
+
+            GL11.glDisable(GL11.GL_BLEND);
+            GL11.glEnable(GL11.GL_TEXTURE_2D);
+            GL11.glEnable(GL11.GL_DEPTH_TEST);
+            GL11.glDisable(GL11.GL_LINE_SMOOTH);
+
+            GL11.glPopMatrix();
+
+            GlStateManager.resetColor();
+            GL11.glColor4f(1F, 1F, 1F, 1F);
+        }
     }
 }
-

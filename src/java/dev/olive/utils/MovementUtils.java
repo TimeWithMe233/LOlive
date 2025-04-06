@@ -4,7 +4,9 @@
 package dev.olive.utils;
 
 
+import dev.olive.Client;
 import dev.olive.event.impl.events.*;
+import dev.olive.module.impl.move.TargetStrafe;
 import dev.olive.utils.player.PlayerUtil;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.network.play.client.C03PacketPlayer;
@@ -121,7 +123,13 @@ public final class MovementUtils implements IMinecraft {
     }
 
     public static double getDirection() {
-        float rotationYaw = MovementUtils.mc.thePlayer.rotationYaw;
+        float rotationYaw;
+
+        if(dev.olive.Client.instance.getModuleManager().getModule(TargetStrafe.class).state && dev.olive.Client.instance.getModuleManager().getModule(TargetStrafe.class).active && dev.olive.Client.instance.getModuleManager().getModule(TargetStrafe.class).target != null){
+            rotationYaw = dev.olive.Client.instance.getModuleManager().getModule(TargetStrafe.class).yaw;
+        } else {
+            rotationYaw = mc.thePlayer.rotationYaw;
+        }
         if (MovementUtils.mc.thePlayer.moveForward < 0.0f) {
             rotationYaw += 180.0f;
         }

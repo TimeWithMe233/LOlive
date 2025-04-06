@@ -1,5 +1,3 @@
-import net.minecraft.client.main.Main;
-
 import java.util.Arrays;
 
 public class Start {
